@@ -35,7 +35,7 @@ export default {
 </script>
 
 <style scoped lang="scss">
-main {
+  main {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -49,8 +49,5 @@ main {
     min-width: 370px;
     min-height: 220px;
     margin: 50px 20px;
-  }
-  .img-container {
-
   }
 </style>
