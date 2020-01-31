@@ -1,4 +1,4 @@
-# avito1
+# AV1
 
 ## Project setup
 ```
