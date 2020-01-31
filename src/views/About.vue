@@ -5,9 +5,9 @@
     <b-carousel
       controls
       indicators
-      fade="true"
+      no-animation="true"
       background="#fff"
-      style="text-shadow: 1px 1px 2px #333; margin: 50px 150px;"
+      style="text-shadow: 1px 1px 2px #333; margin: 50px 150px; display: inline-block!important"
     >
       <b-carousel-slide v-for="i in sale.data[0].images.length" :key="i">
         <template v-slot:img>
@@ -54,7 +54,7 @@ export default {
 <style scoped>
 main {
   margin: 0 auto;
-  padding: 2% 25%;
+  padding: 2% 15%;
   text-align: center;
 }
 </style>

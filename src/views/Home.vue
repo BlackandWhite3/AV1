@@ -14,7 +14,7 @@
       <b-card-text>{{ item.address }}</b-card-text>
       <b-card-text>{{ item.price }}</b-card-text>
       <b-button variant="primary">
-        <router-link :to="'/about/' + item.id" tag="a" target="_blank"
+        <router-link :to="'/about/' + item.id" tag="a" target="_blank" style="color: white"
           >About</router-link
         ></b-button>
     </b-card>
