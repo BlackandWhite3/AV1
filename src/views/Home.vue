@@ -4,35 +4,33 @@
 <!--      <h3>{{item.title}}</h3>-->
 <!--      <img :src="item.previewImage" >-->
 <!--    </div>-->
-    <b-card
-            v-for="item in property.info.data" :key="item.id"
+    <b-card bg-variant="light"
+            border-variant="info"
+            v-for="item in property.data" :key="item.id"
             :img-src="item.previewImage"
             img-top
             :title="item.title"
-            :sub-title="item.id"
+            :sub-title="item.id.toString()"
     >
       <b-card-text>{{ item.address }}</b-card-text>
       <b-card-text>{{item.price}}</b-card-text>
-      <b-button variant="primary"><router-link
+      <b-button variant="primary">
+        <router-link
               :to="'/about/'+ item.id"
               tag="a"
               target="_blank"
-              :key="item.id"
       >About</router-link></b-button>
     </b-card>
   </main>
 </template>
 
 <script>
-// @ is an alias to /src
-//import HelloWorld from "@/components/HelloWorld.vue";
 
 export default {
   name: "home",
   props: {
-    property: Object
-  },
-  components: {}
+    property: {}
+  }
 };
 </script>
 

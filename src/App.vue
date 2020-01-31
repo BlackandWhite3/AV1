@@ -6,7 +6,7 @@
       <p>Авито.Недвижимость</p>
       <hr />
     </header>
-    <router-view :property="prop"></router-view>
+    <router-view :property="myProperty"></router-view>
     <footer style="text-align: center">
       <hr />
       Alexander Fadeev ©
@@ -15,19 +15,18 @@
 </template>
 
 <script>
-import { store } from "./store.js";
 const axios = require("axios");
 
 export default {
   data() {
     return {
-      prop: store.state
+      myProperty: {}
     };
   },
   mounted() {
     axios
       .get("http://134.209.138.34/items")
-      .then(response => store.setInfo(response));
+      .then(response => (this.myProperty = response));
   }
 };
 </script>
